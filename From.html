@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 24px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #d2dae8;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+        h1 {
+            margin-top: 0;
+            color: #1d3659;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            border: 1px solid #b8c6db;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form action="#" method="post">
+            <div class="grid">
+                <div>
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="Enter student name" required>
+                </div>
+                <div>
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" placeholder="Enter student ID" required>
+                </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="student@example.com" required>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="5" max="100" placeholder="Age">
+                </div>
+            </div>
+            <label for="grade">Grade / Class</label>
+            <select id="grade" name="grade" required>
+                <option value="">Select grade</option>
+                <option value="1">1st Grade</option>
+                <option value="2">2nd Grade</option>
+                <option value="3">3rd Grade</option>
+                <option value="4">4th Grade</option>
+                <option value="5">5th Grade</option>
+                <option value="6">6th Grade</option>
+                <option value="7">7th Grade</option>
+                <option value="8">8th Grade</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
+                <option value="12">12th Grade</option>
+            </select>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="">Select gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="subjects">Favorite Subjects</label>
+            <textarea id="subjects" name="subjects" rows="4" placeholder="e.g. Math, Science, History"></textarea>
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+</body>
+</html>
